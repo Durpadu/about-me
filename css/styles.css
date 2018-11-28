@@ -1,16 +1,32 @@
 body {
   background-color: #20d09b;
-  border: 5px;
+  line-height: 10px;
 }
+
+#top, #bottom, #left, #right {
+	background: #814269;
+	position: fixed;
+	}
+	#left, #right {
+		top: 0; bottom: 0;
+		width: 15px;
+		}
+		#left { left: 0; }
+		#right { right: 0; }
+		
+	#top, #bottom {
+		left: 0; right: 0;
+		height: 15px;
+		}
+		#top { top: 0; }
+		#bottom { bottom: 0; }
 
 h1 {
   font-size: 48px;
   color: rgb(128, 20, 179);
-  border-style: inset;
 }
 
 p{
   font-family: Helvetica;
-  color: rgb(192, 0, 160); 
-  border-style: outset;
+  color: rgb(192, 0, 160);
 }
