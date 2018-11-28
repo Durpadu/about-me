@@ -49,6 +49,7 @@ if(flavorPref === 'no' || flavorPref === 'NO' || flavorPref === 'No' || flavorPr
   alert('No way! Vanilla is better!');
 }
 console.log('user thinks I like chocolate best ' + flavorPref);
+/* decided to add a bunch of 'or statements, just for the sake of practice*/
 
 var tattooNum = prompt('Do I have more than six tattoos? Y/N').toUpperCase();
 if(tattooNum === 'y'){
