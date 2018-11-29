@@ -17,7 +17,7 @@
 //  }
 
 
-
+// var correctCounter = 0
 // var startGame = prompt('Do you want to play a game?').toUpperCase();
 // if(startGame === 'YES') {
 //   alert('Great, time to play...');
@@ -29,6 +29,7 @@
 // var petGuess = prompt('Do you think I have more than 4 pets?').toLowerCase();
 // if(petGuess === 'no') {
 //   alert('That is correct!');
+//   correctCounter++
 // } else {
 //   alert('That is incorrect!');
 // }
@@ -67,37 +68,54 @@
 // }
 // console.log('nerd level is correct ' + cardGames);
 
-// New Game
-var guessRemains = 4;
-var myAge = 28;
-while(guessRemains > 0) {
-  var guessMyAge = prompt( 'Can you guess my age?');
-  guessMyAge = parseInt(guessMyAge);
+//New Game
+// var guessRemains = 4;
+// var myAge = 28;
+// while(guessRemains > 0) {
+//   var guessMyAge = prompt( 'Can you guess my age?');
+//   guessMyAge = parseInt(guessMyAge);
 
-  if(guessMyAge === myAge) {
-    alert('You are correct! I am still, thankfully, in my 20\'s');
-    break;
-  } else if(guessMyAge > myAge) {
-    guessRemains--;
-    alert('I\'m not that old!');
-  } else if(guessMyAge < myAge) {
-    guessRemains--;
-    alert('Thanks for thinking I look so young!');
-  }
-}
-console.log('user has guessed ' + guessMyAge);
-console.log(guessRemains);
+//   if(guessMyAge === myAge) {
+//     alert('You are correct! I am still, thankfully, in my 20\'s');
+//     break;
+//   } else if(guessMyAge > myAge) {
+//     guessRemains--;
+//     alert('I\'m not that old!');
+//   } else if(guessMyAge < myAge) {
+//     guessRemains--;
+//     alert('Thanks for thinking I look so young!');
+//   }
+//   if( guessRemains===0) {
+//     alert('Sorry, you\'re out of attempts. The right answer is 28.');
+//   }
+// }
+// console.log('user has guessed ' + guessMyAge);
+// console.log(guessRemains);
 
-var leftGuess = 6;
+var numGuess = 3;
 var petNames = ['meatloaf', 'noodle', 'vader'];
-for(var i = 0; i < petNames.length; i++); {
-  var petNameGuess = prompt('I have 3 pets. Can you guess one of their names? **HINT** Two are named after food.').toLowerCase;
-  if(petNameGuess === petNames[i]) {
-    alert('That\'s correct!');
-  } else if (petNameGuess !== petNames[i]) {
-    alert('Sorry, try again.');
-    leftGuess--;
+var petFlag = false;
+// going throught array
+
+for(var x = 0; x < numGuess; x ++) {
+  var petNameGuess = prompt('I have 3 pets. Can you guess one of their names? **HINT** Two are named after food.');
+  console.log(petNameGuess);
+  petNameGuess= petNameGuess.toLowerCase();
+  console.log(petFlag);
+
+  // checking for true
+  for(var i = 0; i < petNames.length; i++) {
+    console.log(petNameGuess + ':' + petNames[i]);
+    if(petNameGuess === petNames[i]) {
+      petFlag = true;
+    }
+    if( petFlag === true) {
+      alert('That\'s correct!');
+      break;
+    } else {
+      alert( 'try again');
+    }
   }
+  console.log('user guessed ' + petNameGuess);
+  console.log(numGuess);
 }
-console.log('user guessed ' + petNameGuess);
-console.log(leftGuess);
