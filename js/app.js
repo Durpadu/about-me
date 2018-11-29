@@ -72,7 +72,7 @@ var myAge = 28;
 while(guessRemains > 0) {
   var guessMyAge = prompt( 'Can you guess my age?');
   guessMyAge = parseInt(guessMyAge);
-  
+
   if(guessMyAge === myAge) {
     alert('You are correct! I am still, thankfully, in my 20\'s');
     break;
@@ -84,16 +84,19 @@ while(guessRemains > 0) {
     alert('Thanks for thinking I look so young!');
   }
 }
+console.log('user has guessed ' + guessMyAge);
+console.log(guessRemains);
 
-// var petNames = ['Meatloaf', 'Noodle', 'Vader'];
-// var petNameGuess = prompt('I have 3 pets. Can you guess one of their names?').toLowerCase;
-// for(var i = 0; i < petNames.length; i++); {
-//   if(petNameGuess === petNames[i]) {
-//     alert('That\'s correct!');
-//     // break;
-//   } else {
-//     alert('Sorry, try again.')
-//   }
-//   petNameGuess = prompt('I have 3 pets. Can you guess one of their names?');
-// }
-// console.log('user guessed ' + petNameGuess)
+var leftGuess = 6;
+var petNames = ['Meatloaf', 'Noodle', 'Vader'];
+for(var i = 0; i < petNames.length; i++); {
+  var petNameGuess = prompt('I have 3 pets. Can you guess one of their names? **HINT** Two are named after food').toLowerCase;
+  if(petNameGuess === petNames[i]) {
+    alert('That\'s correct!');
+  } else {
+    alert('Sorry, try again.');
+    leftGuess--;
+  }
+}
+console.log('user guessed ' + petNameGuess);
+console.log(leftGuess);
