@@ -1,14 +1,16 @@
 body {
 	background-color: #20d09b;
-	border: 3px inset black;
+	border: 10px inset black;
 }
 
 h1 {
   font-size: 48px;
   color: rgb(128, 20, 179);
+  border: 5px solid white;
 }
 
 p{
   font-family: Helvetica;
   color: rgb(192, 0, 160);
+  border: 5px outset rgb(106, 106, 228);
 }
