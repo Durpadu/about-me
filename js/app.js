@@ -88,12 +88,12 @@ console.log('user has guessed ' + guessMyAge);
 console.log(guessRemains);
 
 var leftGuess = 6;
-var petNames = ['Meatloaf', 'Noodle', 'Vader'];
+var petNames = ['meatloaf', 'noodle', 'vader'];
 for(var i = 0; i < petNames.length; i++); {
-  var petNameGuess = prompt('I have 3 pets. Can you guess one of their names? **HINT** Two are named after food').toLowerCase;
+  var petNameGuess = prompt('I have 3 pets. Can you guess one of their names? **HINT** Two are named after food.').toLowerCase;
   if(petNameGuess === petNames[i]) {
     alert('That\'s correct!');
-  } else {
+  } else if (petNameGuess !== petNames[i]) {
     alert('Sorry, try again.');
     leftGuess--;
   }

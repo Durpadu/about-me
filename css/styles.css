@@ -1,6 +1,6 @@
 body {
-  background-color: #20d09b;
-  line-height: 10px;
+	background-color: #20d09b;
+	border: 3px inset black;
 }
 
 h1 {
