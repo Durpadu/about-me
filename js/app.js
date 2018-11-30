@@ -19,7 +19,7 @@ function petNumFunct () {
   var petGuess = prompt('Do you think I have more than 4 pets?').toLowerCase();
   if(petGuess === 'no') {
     alert('That is correct!');
-    correctCounter++
+    correctCounter++;
   } else {
     alert('That is incorrect!');
   }
@@ -32,7 +32,7 @@ function travelGuessFunct () {
     alert('Sorry, but I\'ve never been to India.');
   } else {
     alert('Thats correct. Never been to India');
-    correctCounter++
+    correctCounter++;
   }
   console.log('The user thought ' + travelGuess);
 }
@@ -41,23 +41,23 @@ function flavorFunct () {
   var flavorPref = prompt('Is my favorite flavor of ice cream chocolate?');
   if(flavorPref === 'no' || flavorPref === 'NO' || flavorPref === 'No' || flavorPref === 'nO') {
     alert('You\'re right, I like a lot of other flavors more than chocolate!');
-    correctCounter++
+    correctCounter++;
   } else{
     alert('No way! Vanilla is better!');
   }
   console.log('user thinks I like chocolate best ' + flavorPref);
   /* decided to add a bunch of 'or statements, just for the sake of practice*/
- }
+}
 
 function tattooFunct (){
   var tattooNum = prompt('Do I have more than six tattoos? Y/N').toUpperCase();
-if(tattooNum === 'y'){
-  alert('No, but I wish I did have more!');
-} else{
-  alert('That\'s exactly right!');
-  correctCounter++
-}
-console.log('tatto answer ' + tattooNum);
+  if(tattooNum === 'y'){
+    alert('No, but I wish I did have more!');
+  } else{
+    alert('That\'s exactly right!');
+    correctCounter++;
+  }
+  console.log('tatto answer ' + tattooNum);
 }
 
 function cardGameFunct (){
@@ -82,6 +82,7 @@ function ageFunct () {
 
     if(guessMyAge === myAge) {
       alert('You are correct! I am still, thankfully, in my 20\'s');
+      // eslint-disable-next-line semi
       correctCounter++
       break;
     } else if(guessMyAge > myAge) {
@@ -114,7 +115,7 @@ function petFunct () {
     if (petNames.includes(petNameGuess)) {
       alert('That is correct! Congrats!');
       console.log('pets' + correctCounter);
-      correctCounter++
+      correctCounter++;
       break;
     }
 
@@ -124,13 +125,13 @@ function petFunct () {
       console.log(counterGuess);
     }
     if (counterGuess === 6) {
-      alert('Looks like you\'re all out of tries...')
+      alert('Looks like you\'re all out of tries...');
     }
-  while(counterGuess < 6);
+  }while(counterGuess < 6);
 }
 
 function userRightFunct() {
-  alert( name + ' you got ' + counterCorrect + ' out of 7.');
+  alert( name + ' you got ' + correctCounter + ' out of 7.');
 }
 
 
