@@ -128,6 +128,7 @@ function petFunct () {
       alert('Looks like you\'re all out of tries...');
     }
   }while(counterGuess < 6);
+  alert('MY dog is named Vader, and my cats are named Meatloaf and Noodle! :) ');
 }
 
 function userRightFunct() {
