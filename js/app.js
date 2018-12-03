@@ -64,6 +64,7 @@ function cardGameFunct (){
   var cardGames = prompt('Do I like trading card games? Y/N').toLowerCase();
   if(cardGames === 'y'){
     alert('Ya! I like games like Magic: The Gathering');
+    correctCounter++;
   } else{
     alert('Actually, I really enjoy trading card games.');
   }
@@ -132,7 +133,7 @@ function petFunct () {
 }
 
 function userRightFunct() {
-  alert( name + ' you got ' + correctCounter + ' out of 7.');
+  alert( name + ' you got ' + correctCounter + ' out of 6.');
 }
 
 
